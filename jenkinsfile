@@ -1,0 +1,14 @@
+
+node {
+  checkout scm
+  docker.withImage('https://registry.hub.docker.com', 'passw0rd') {
+  
+  def customImage = docker.build("veera523/31-05-2019')
+
+  /*push the container to the custom registry*/
+
+  customImage.push()
+
+      }  
+
+  }
